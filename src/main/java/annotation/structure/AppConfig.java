@@ -43,10 +43,7 @@ public class AppConfig implements WebMvcConfigurer {
 	@Bean
 	public JavaMailSender getJavaMailSender() {
 		JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-		mailSender.setHost("ultra.audiotele.ru");
-		mailSender.setPort(25);
-		mailSender.setUsername("");
-		mailSender.setPassword("");
+
 		Properties props = mailSender.getJavaMailProperties();
 		props.put("mail.transport.protocol", "smtp");
 		props.put("mail.smtp.auth", "false");
